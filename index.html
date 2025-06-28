@@ -1,0 +1,614 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <link rel="preload" href="./fonts/Aspekta-500.ttf" as="font" type="font/ttf" crossorigin="anonymous">
+  <link rel="preload" href="./fonts/Aspekta-600.ttf" as="font" type="font/ttf" crossorigin="anonymous">
+  <link rel="preload" href="./fonts/Aspekta-700.ttf" as="font" type="font/ttf" crossorigin="anonymous">
+  <link rel="preload" href="./fonts/Manrope-Bold.ttf" as="font" type="font/ttf" crossorigin="anonymous">
+  <link rel="preload" href="./fonts/Manrope-SemiBold.ttf" as="font" type="font/ttf" crossorigin="anonymous">
+  <link rel="preload" href="./fonts/Manrope-Medium.ttf" as="font" type="font/ttf" crossorigin="anonymous">
+  <link rel="preload" href="./fonts/Manrope-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://orenascimentodainternet.com">
+  <meta property="og:title" content="O RENASCIMENTO DA INTERNET | Thiago Finch">
+  <meta property="og:description" content="$10.000 Dólares por mês, sem mostrar o rosto, usando máquinas inteligentes...">
+  <meta property="og:image" content="https://orenascimentodainternet.com/public/images/og.webp">
+
+  <!-- Open Graph / Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://orenascimentodainternet.com">
+  <meta property="twitter:title" content="O RENASCIMENTO DA INTERNET | Thiago Finch">
+  <meta property="twitter:description" content="$10.000 Dólares por mês, sem mostrar o rosto, usando máquinas inteligentes...">
+  <meta property="twitter:image" content="https://orenascimentodainternet.com/public/images/og.webp">
+
+  <title>O Renascimento da Internet</title>
+  <!-- Favicon -->
+  <link rel="icon" href="./images/favicon.png" type="image/png">
+  <!-- Bootstrap 5 -->
+  <link rel="stylesheet" href="./Css/bootstrap.min.css">
+  <!-- Estilos CSS -->
+  <link rel="stylesheet" href="./Css/all.min.css">
+  <link rel="stylesheet" href="./Css/style.css">
+  <link rel="stylesheet" href="./Css/cadastro-confirmado-1-dev.css">
+  <link rel="stylesheet" href="./Css/modal.css">
+
+<style>
+/* Font - Aspekta */
+@font-face {
+  font-family: 'Aspekta';
+  src: url('../fonts/Aspekta-600.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Aspekta';
+  src: url('../fonts/Aspekta-500.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Aspekta';
+  src: url('../fonts/Aspekta-700.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+/* Font - Manrope */
+@font-face {
+  font-family: 'Manrope';
+  src: url('../fonts/Manrope-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Manrope';
+  src: url('../fonts/Manrope-SemiBold.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Manrope';
+  src: url('../fonts/Manrope-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Manrope';
+  src: url('../fonts/Manrope-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+button:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 80%;
+}
+
+::-webkit-scrollbar-track {
+  background: inherit;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 99px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+/* Tags */
+body {
+  font-family: "Manrope", sans-serif;
+  color: #F4F3F2;
+  background-color: #0E0C0C;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+hr {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 1.5px;
+  background: rgba(255, 255, 255, 0.20);
+}
+
+/* Botão */
+.btn-cta-box {
+  width: 100%;
+  padding: 10px;
+  background-color: #0F0D0D;
+  background: linear-gradient(225deg, rgba(240, 242, 255, 0.24) 5%, rgba(255, 255, 255, 0.08) 43%, rgba(255, 255, 255, 0.03) 68%);
+  background: -webkit-linear-gradient(225deg, rgba(240, 242, 255, 0.24) 5%, rgba(255, 255, 255, 0.08) 43%, rgba(255, 255, 255, 0.03) 68%);
+  border: 1px solid rgba(132, 117, 110, 0.26);
+  border-radius: 100px;
+  /* backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px); */
+  box-shadow: 23.9px 19.78px 82.49px 0px #00000094;
+}
+
+.btn-cta {
+  width: 100%;
+  padding: 14px 16px 14px 16px;
+  background:
+    url('../images/bg-button.png') no-repeat center center / cover,
+    linear-gradient(271.55deg, rgba(255, 136, 72, 0.44) 5.88%, rgba(204, 126, 58, 0) 50.22%, rgba(153, 73, 43, 0.44) 95.32%);
+  border: 1px solid rgba(132, 117, 110, 0.55);
+  border-radius: 100px;
+  letter-spacing: 0.8px;
+  font-family: 'Aspekta', sans-serif;
+  font-weight: 600;
+  font-size: 15px;
+  color: #fff;
+  /* backdrop-filter: blur(12.4px);
+  -webkit-backdrop-filter: blur(12.4px); */
+  box-shadow: -4.15px 10.39px 70.01px 0px #1B1111E3,
+    -2.08px 4.15px 38.22px 0px #0F0F0F,
+    -5.2px -4px 12.3px -10.4px #FFE5BC57 inset;
+  position: relative;
+  z-index: 2;
+}
+
+/* Button effects */
+.glowbox {
+  isolation: isolate;
+  overflow: hidden;
+  border-radius: 999px;
+  display: block;
+  position: relative;
+  width: 346px;
+  margin: auto;
+}
+
+.glowbox-active .glowbox-animations,
+.glowbox-active .glowbox-borders-masker {
+  opacity: 1;
+}
+
+.glowbox-animations,
+.glowbox-borders {
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  z-index: 1;
+}
+
+.glowbox-animations:before,
+.glowbox-borders:before {
+  content: "";
+  float: left;
+  padding-top: 100%;
+}
+
+.glowbox-animations:after,
+.glowbox-borders:after {
+  clear: both;
+  content: "";
+  display: block;
+}
+
+.glowbox-animations {
+  opacity: 0;
+  pointer-events: none;
+  transition: 1s ease opacity;
+}
+
+.glowbox-animations * {
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+.glowbox-borders,
+.glowbox-glow,
+.glowbox-stars {
+  animation: borderTurn var(--animation-speed) infinite linear;
+  background-image: conic-gradient(from 0 at 50% 50%,
+      rgba(255, 136, 72, 1) 0deg,
+      rgba(100, 132, 139, 0) 60deg,
+      rgba(100, 132, 139, 0) 300deg,
+      rgba(255, 198, 164, 1) 360deg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.glowbox-stars-masker {
+  -webkit-mask: url("data:image/svg+xml,%3Csvg width='28' height='24' viewBox='0 0 28 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M14.0534 15.732C13.8444 15.283 14.2848 14.8489 14.7326 15.051C14.8296 15.0959 14.9043 15.1707 14.949 15.268C15.1506 15.717 14.7177 16.1511 14.2698 15.949C14.1728 15.9041 14.0982 15.8293 14.0534 15.732Z' fill='black'/%3E%3Cpath d='M18.8001 13.5093C19.0016 13.0603 18.5687 12.6263 18.1209 12.8283C18.0239 12.8732 17.9492 12.9481 17.9045 13.0453C17.6955 13.4944 18.1358 13.9284 18.5837 13.7264C18.6807 13.6815 18.7553 13.6066 18.8001 13.5093Z' fill='black'/%3E%3Cpath d='M0.949043 2.732C1.15057 2.28297 0.717663 1.84891 0.269836 2.05097C0.172806 2.09587 0.098162 2.17071 0.0533793 2.268C-0.155607 2.71703 0.284759 3.15109 0.732587 2.94903C0.829616 2.90413 0.90426 2.82929 0.949043 2.732Z' fill='black'/%3E%3Cpath d='M26.9489 7.732C27.151 7.28297 26.7169 6.84891 26.2679 7.05097C26.1706 7.09587 26.0958 7.17071 26.0508 7.268C25.8488 7.71703 26.2828 8.15109 26.7319 7.94903C26.8292 7.90413 26.904 7.82929 26.9489 7.732Z' fill='black'/%3E%3Cpath d='M13.0534 5.732C12.8444 5.28297 13.2848 4.84891 13.7326 5.05097C13.8296 5.09587 13.9043 5.17071 13.949 5.268C14.1506 5.71703 13.7177 6.15109 13.2698 5.94903C13.1728 5.90413 13.0982 5.82929 13.0534 5.732Z' fill='black'/%3E%3Cpath d='M10.0534 17.732C9.84439 17.283 10.2848 16.8489 10.7326 17.051C10.8296 17.0959 10.9043 17.1707 10.949 17.268C11.1506 17.717 10.7177 18.1511 10.2698 17.949C10.1728 17.9041 10.0982 17.8293 10.0534 17.732Z' fill='black'/%3E%3Cpath d='M15.0534 21.732C14.8444 21.283 15.2848 20.8489 15.7326 21.051C15.8296 21.0959 15.9043 21.1707 15.949 21.268C16.1506 21.717 15.7177 22.1511 15.2698 21.949C15.1728 21.9041 15.0982 21.8293 15.0534 21.732Z' fill='black'/%3E%3C/svg%3E%0A");
+  mask: url("data:image/svg+xml,%3Csvg width='28' height='24' viewBox='0 0 28 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M14.0534 15.732C13.8444 15.283 14.2848 14.8489 14.7326 15.051C14.8296 15.0959 14.9043 15.1707 14.949 15.268C15.1506 15.717 14.7177 16.1511 14.2698 15.949C14.1728 15.9041 14.0982 15.8293 14.0534 15.732Z' fill='black'/%3E%3Cpath d='M18.8001 13.5093C19.0016 13.0603 18.5687 12.6263 18.1209 12.8283C18.0239 12.8732 17.9492 12.9481 17.9045 13.0453C17.6955 13.4944 18.1358 13.9284 18.5837 13.7264C18.6807 13.6815 18.7553 13.6066 18.8001 13.5093Z' fill='black'/%3E%3Cpath d='M0.949043 2.732C1.15057 2.28297 0.717663 1.84891 0.269836 2.05097C0.172806 2.09587 0.098162 2.17071 0.0533793 2.268C-0.155607 2.71703 0.284759 3.15109 0.732587 2.94903C0.829616 2.90413 0.90426 2.82929 0.949043 2.732Z' fill='black'/%3E%3Cpath d='M26.9489 7.732C27.151 7.28297 26.7169 6.84891 26.2679 7.05097C26.1706 7.09587 26.0958 7.17071 26.0508 7.268C25.8488 7.71703 26.2828 8.15109 26.7319 7.94903C26.8292 7.90413 26.904 7.82929 26.9489 7.732Z' fill='black'/%3E%3Cpath d='M13.0534 5.732C12.8444 5.28297 13.2848 4.84891 13.7326 5.05097C13.8296 5.09587 13.9043 5.17071 13.949 5.268C14.1506 5.71703 13.7177 6.15109 13.2698 5.94903C13.1728 5.90413 13.0982 5.82929 13.0534 5.732Z' fill='black'/%3E%3Cpath d='M10.0534 17.732C9.84439 17.283 10.2848 16.8489 10.7326 17.051C10.8296 17.0959 10.9043 17.1707 10.949 17.268C11.1506 17.717 10.7177 18.1511 10.2698 17.949C10.1728 17.9041 10.0982 17.8293 10.0534 17.732Z' fill='black'/%3E%3Cpath d='M15.0534 21.732C14.8444 21.283 15.2848 20.8489 15.7326 21.051C15.8296 21.0959 15.9043 21.1707 15.949 21.268C16.1506 21.717 15.7177 22.1511 15.2698 21.949C15.1728 21.9041 15.0982 21.8293 15.0534 21.732Z' fill='black'/%3E%3C/svg%3E%0A");
+  -webkit-mask-repeat: repeat;
+  mask-repeat: repeat;
+  -webkit-mask-size: auto;
+  mask-size: auto;
+}
+
+.glowbox-glow {
+  filter: blur(8px);
+  opacity: 0.12;
+}
+
+.glowbox-borders {
+  animation-name: borderTurnWithTranslate;
+}
+
+.glowbox-borders-masker {
+  border-radius: 999px;
+  content: "";
+  height: 100%;
+  inset: 0;
+  left: 0;
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask-composite: xor;
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  opacity: 0;
+  padding: 1px;
+  pointer-events: none;
+  position: absolute;
+  top: 0;
+  transition: 1s ease opacity;
+  width: 100%;
+  z-index: 1;
+}
+
+.glowbox-button {
+  display: flex;
+  width: 100%;
+  gap: 12px;
+  align-items: center;
+  font-feature-settings: "cv06" on, "calt" off, "liga" off;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: -0.01em;
+  line-height: 24px;
+  background-color: #ffffff11;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 999px;
+  cursor: pointer;
+  padding: 8px;
+  position: relative;
+  z-index: 1;
+  -webkit-border-radius: 999px;
+  -moz-border-radius: 999px;
+  -ms-border-radius: 999px;
+  -o-border-radius: 999px;
+}
+
+.glowbox-button:after {
+  content: "";
+  background: radial-gradient(85% 120% at 50% 120%,
+      rgba(97, 210, 255, 0.24) 0%,
+      rgba(106, 126, 134, 0) 100%);
+  border-radius: 999px;
+  height: calc(100% + 4px);
+  left: -2px;
+  opacity: 0;
+  position: absolute;
+  top: -2px;
+  transition: 1s all;
+  width: calc(100% + 4px);
+}
+
+.glowbox-button:hover:after {
+  opacity: 0.7;
+}
+
+.glowbox-button span {
+  display: block;
+  color: white;
+}
+
+
+.email-box {
+  display: flex;
+  gap: 12px;
+  padding: 12px 20px;
+  border-radius: 8px;
+  border: 1px solid rgba(132, 117, 110, 0.26);
+  box-shadow: 23.898px 19.778px 82.489px 0px rgba(0, 0, 0, 0.58);
+  width: fit-content;
+  margin: 20px auto;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 120%;
+}
+
+.orange-linear-title {
+  background: linear-gradient(90deg, #E73E00 19.5%, #E77400 80.96%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.headline-confirmacao {
+  font-size: 32px;
+  text-align: center;
+  width: 80%;
+  margin: auto;
+  line-height: auto;
+}
+
+@keyframes borderTurn {
+  0% {
+    transform: rotate(0);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes borderTurnWithTranslate {
+  0% {
+    transform: translate(-50%, -50%) rotate(0);
+  }
+
+  to {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+/* Progress bar */
+.custom-progress {
+  background-color: transparent;
+  border: 1px solid rgba(132, 117, 110, 0.26);
+  border-radius: 100px;
+  height: 35px;
+  overflow: hidden;
+  padding: 6px;
+}
+
+.custom-progress-bar {
+  border-radius: 289px;
+  background: linear-gradient(90deg, rgba(255, 70, 2, 0.03) 0%, #EE5219 69.53%, #FF6200 85.18%, #FFFF4D 96.72%, #FFFFC4 103.29%);
+  font-weight: bold;
+  color: #000000;
+  border-radius: 100px;
+  display: flex;
+  align-items: end;
+  justify-content: center;
+  transition: width 2s ease-in-out;
+  padding-right: 16px;
+}
+
+@media (max-width: 768px) {
+  .glowbox {
+    width: 100%;
+  }
+
+  .headline-confirmacao {
+    font-size: 20px;
+    width: 90%;
+    margin: auto;
+  }
+
+  .email-box {
+    font-size: 14px;
+  }
+}
+
+</style>
+
+  <!-- Google Tag Manager -->
+  <script>
+    (function(w, d, s, l, i) {
+      w[l] = w[l] || [];
+      w[l].push({
+        'gtm.start': new Date().getTime(),
+        event: 'gtm.js'
+      });
+      var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s),
+        dl = l != 'dataLayer' ? '&l=' + l : '';
+      j.async = true;
+      j.src =
+        'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+      f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-MKB4S5DN');
+  </script>
+  <!-- End Google Tag Manager -->
+
+  <script>
+    var head = document.head;
+    var script = document.createElement('script');
+    script.type = 'text/javascript';
+    script.src = "https://210366.t.hyros.com/v1/lst/universal-script?ph=1a82cec5b2525cc9669aafc9f72b5e5e4cd765a2d7c4f5d56a81be793dc3a60e&tag=!clicked&ref_url=" + encodeURI(document.URL);
+    head.appendChild(script);
+  </script>
+</head>
+
+<body class="confirm-2">
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MKB4S5DN" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+  <main id="hero2" class="container">
+    <div class="row justify-content-evenly align-items-center my-3">
+      <div class="mobile90 col-12 col-xl-8 text-start">
+        <div class="progress custom-progress my-4">
+          <div class="progress-bar custom-progress-bar" role="progressbar" aria-valuenow="73" aria-valuemin="0" aria-valuemax="100">
+            73%
+          </div>
+        </div>
+
+        <h1 class="headline-confirmacao">
+        <span class="orange-linear-title d-block">Dos pasos…</span> 
+        </h1>
+
+        <p class="text-center subheadline">Mirá el video de abajo y entrá al grupo secreto de WhatsApp para no perderte nada del nuevo<span style="color: #fff;"> Renacimiento de Internet</span>.</p>
+
+        <div class="video-container">
+          <div class="video">
+            <iframe id="panda-5939eb82-95ce-432a-8736-d105287ba3b9" src="https://player-vz-2cdebb25-226.tv.pandavideo.com.br/embed/?v=5939eb82-95ce-432a-8736-d105287ba3b9" allow="accelerometer;gyroscope;autoplay;encrypted-media;picture-in-picture" allowfullscreen=true width="100%" height="100%" fetchpriority="high"></iframe>
+          </div>
+        </div>
+
+        <div class="d-block flex-column flex-md-row align-items-center justify-content-center py-3">
+          <!-- Button -->
+          <div style="--animation-speed:2s" class="glowbox glowbox-active">
+            <div class="glowbox-animations">
+              <div class="glowbox-glow"></div>
+              <div class="glowbox-stars-masker">
+                <div class="glowbox-stars"></div>
+              </div>
+            </div>
+
+            <div class="glowbox-borders-masker">
+              <div class="glowbox-borders"></div>
+            </div>
+
+            <a href="https://sendflow.pro/i/thiago-finch-o-renascimento-1" class="text-decoration-none">
+              <button class="btn-cta-box d-flex align-items-center" data-bs-toggle="modal" data-bs-target="#formPreCheckout">
+                <div class="btn-cta">INGRESAR AL GRUPO VIP</div>
+                <img src="./images/icon-whatsapp.webp" class="mx-3">
+              </button>
+            </a>
+          </div>
+
+          <div class="email-box">           
+              <div class="email-icons">
+                  <a href="https://outlook.live.com/mail/0/inbox" target="_blank">
+                    <img src="./images/mail.svg" alt="Outlook">
+                  </a>
+                  <!--
+                  <a href="https://mail.google.com/mail/u/0/#inbox" target="_blank">
+                    <img src="./public/images/mail.svg" alt="Gmail">
+                  </a>
+                  <a href="https://mail.google.com/mail/u/0/#inbox" target="_blank">
+                    <img src="./public/images/mail.svg" alt="Gmail">
+                  </a> -->
+              </div>
+              <p class="email-step fw-semibold"><span class="orange-linear-title fw-bold">PASSO 2:</span> Accede a tu email y confirma tu registro</p>
+                <div>
+                   <p class="obs">Marca el email como favorito ⭐️, esto indica que mis correos son prioridad para ti y asegura que recibirás absolutamente toda la información privilegiada que te voy a enviar por ahí.</p>
+                    </div>
+          </div>
+
+
+
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="container">
+    <hr class="d-none d-md-block mt-5">
+
+    <div class="d-flex align-items-center justify-content-between text-center">
+      <p class="d-none d-md-block">© Copyright 2025 Bilhon. Todos os direitos reservados.</p>
+      <p class="d-block d-md-none">© Copyright 2025 Bilhon.</p>
+      <a style="cursor: pointer; color: #fff;" href="#" data-bs-toggle="modal" data-bs-target="#modalPoliticas">Termos de Uso</a>
+    </div>
+  </footer>
+
+  <!-- Modal Termos de Uso -->
+  <div class="modal fade pe-0" id="modalPoliticas" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content custom-modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Termos Legais</h5>
+          <button type="button" id="btn-close" class="modal-close" data-bs-dismiss="modal" aria-label="Close"><i class="fa-solid fa-times"></i></button>
+        </div>
+        <div class="modal-body">
+          <p>
+<b>TERMOS DE USO</b>
+<br><br>
+<b>INFORMAÇÕES PRELIMINARES</b>
+<br>
+Este site e todo o seu conteúdo (o “WEBSITE”) são de propriedade exclusiva de DIGITAL STAGE LTDA., inscrita no CNPJ sob o nº 47.378.381/0001-00, com sede à Rua Bernardo Guimarães, 245, Funcionários, João Belo Horizonte - MG, CEP: 30.140-080 (“FORNECEDORA”), identificada em epígrafe, detentora do endereço eletrônico <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="244251564d4b4a645751544b565041464d484c4b4a0a474b49">[email&#160;protected]</a> (“WEBSITE”) e subendereços.
+<br><br>
+O USUÁRIO é a pessoa física ou jurídica que se cadastrou no WEBSITE ou que adquiriu produtos e serviços através do WEBSITE, pelo que reconhece e aceita os presentes Termos de Uso como Contrato por meio eletrônico.
+<br><br>
+Atenção! Ao acessar o WEBSITE e /ou ao efetuar a aquisição de qualquer produto ou serviço através do mesmo, você está se declarando ciente e concordando de forma irrestrita, irrenunciável e irretratável, com o inteiro teor deste contrato digital (TERMOS DE USO) e com nosso Aviso de Privacidade. 
+<br><br>
+Caso você discorde de qualquer parte deste termo, você não deve acessar este site nem adquirir qualquer produto ou serviço aqui relacionado. 
+<br><br>
+Eventual tolerância da FORNECEDORA quanto ao descumprimento de qualquer obrigação prevista em seus Termos de Uso, contratos e na Política de Privacidade do WEBSITE não implica em novação nem tampouco em renúncia ao direito de exigir o cumprimento da obrigação.
+<br><br>
+Importante! Alguns produtos digitais, serviços e/ou conteúdos oferecidos pela FORNECEDORA são objeto de contratos específicos, devendo o presente instrumento, nestes casos em específico, ser tratado como suplementar. Em não havendo contrato específico apresentado previamente para o USUÁRIO para determinado produto digital, serviço e/ou conteúdo, valerão as regras gerais especificadas no respectivo contrato-tipo, anexo e parte integrante dos presentes TERMOS LEGAIS para todos os fins de direito.
+<br><br>
+<b>USO DO SITE</b>
+<br>
+Ao usar o WEBSITE, você está ciente de que o conteúdo aqui disponibilizado, seja por meio escrito ou qualquer forma de mídia, inclusive imagens, vídeos e voz, são fruto do intelecto dos profissionais da FORNECEDORA e, portanto, constituem patrimônio intelectual da empresa e/ou dos mesmos. 
+<br><br>
+A disponibilização do conteúdo para o usuário final, seja ela de forma gratuita ou paga, jamais se dá por venda e compra ou outra forma de transferência definitiva de propriedade.   
+<br><br>
+Na aquisição de qualquer direito, produto, infoproduto ou serviços da FORNECEDORA, o USUÁRIO se vincula ao respectivo contrato, parte integrante dos presentes “termos legais” e abaixo apresentados na íntegra.
+<br><br>
+O USUÁRIO declara-se ciente de que é vedado plagiar conteúdo e fazer uso indevido de imagem, sob pena de arcar com os danos patrimoniais, lucros cessantes, danos morais por uso indevido de imagem, voz e /ou propriedade intelectual sem prejuízo de outras sanções, inclusive de natureza penal.  
+<br><br>
+A proibição se estende ainda que o ato vise obter cópia para uso exclusivo pessoal, quando o objeto não for disponibilizado para esta finalidade.
+<br><br>
+O USUÁRIO não pode usar nenhum dado presente no site com finalidade de publicidade ou propaganda, direta ou indiretamente, ainda que de forma gratuita e sem finalidade comercial, sem a prévia solicitação e consentimento da FORNECEDORA.
+<br><br>
+Toda e qualquer aquisição de direito de uso dos produtos e/ou serviços da FORNECEDORA será realizada por meio de plataformas financeiras especializadas em pagamentos eletrônicos e intermediação, as quais possuem regulamentos, termos de uso e políticas próprias, que devem ser consideradas e avaliadas em seus respectivos âmbitos de atuação e sob responsabilidade exclusiva daquelas empresas. Não recomendamos que o USUÁRIO efetive qualquer negócio, ou adquira qualquer produto ou serviço caso discorde do todo ou em parte dos regulamentos, termos de uso e/ou das políticas das plataformas de pagamento.
+<br><br>
+Após o cadastro, o USUÁRIO passa a receber com prioridade o nosso conteúdo, no entanto, tem toda a liberdade de se retirar a partir do momento que não quiser mais fazer parte da nossa lista. Essa opção estará disponível em um link no rodapé dos próprios e-mails que enviarmos a você, ou diretamente pelo meio de contato disponível no WEBSITE.
+<br><br>
+<b>PROPRIEDADE INTELECTUAL</b>
+<br>
+Todos os direitos relativos a este WEBSITE são reservados à FORNECEDORA, inclusive, mas não se limitando a textos, imagens, áudios, vídeos e quaisquer outros conteúdos. Todas as marcas aqui apresentadas são da FORNECEDORA, ou de empresas parceiras, afiliadas, fornecedoras ou referem-se a produtos para os quais possuímos a devida licença comercialização.
+<br><br>
+É terminantemente proibido ao usuário do site: disponibilizar nossos conteúdos de forma gratuita ou onerosa ao público em geral, transformar, plagiar, ou modificar de quaisquer formas os conteúdos da FORNECEDORA, a menos que possua prévia autorização por escrito do titular dos correspondentes direitos.
+<br><br>
+<b>LIMITAÇÃO DE RESPONSABILIDADE</b>
+<br>
+É vedado ao USUÁRIO que discorde parcial ou integralmente do Aviso de Privacidade ou dos Termos de Uso aqui veiculados acessar o conteúdo do WEBSITE.
+<br><br>
+Tendo em vista as características inerentes ao ambiente e intrínsecas à utilização da internet e equipamentos eletrônicos, a FORNECEDORA não se responsabiliza por eventuais problemas a que não tenha dado causa, tais como, mas não limitados, àqueles decorrentes de provedores de acesso à internet, nem pela falta de fornecimento de energia elétrica para o sistema do seu provedor de acesso, falhas no sistema de transmissão ou roteamento de acesso à internet, de incompatibilidade de sistemas de usuário, de falha técnica de qualquer tipo, de inadequação de equipamentos, de mau funcionamento de qualquer rede, de hardware ou software ou impossibilidade de utilização de plataformas e recursos eventualmente indicados pela FORNECEDORA ao USUÁRIO, ou seja, de qualquer ação de terceiros que impeça o acesso ao INFOPRODUTO bem como por problemas decorrentes de caso fortuito ou de força maior.
+<br><br>
+<b>CONTATO</b>
+<br>
+Todo contato por parte de usuários da FORNECEDORA deverá ocorrer através do canal de contato disponível no WEBSITE.
+<br><br>
+Para dirimir de forma definitiva quaisquer dúvidas relativas aos termos de uso ou contratos relacionados aos produtos e/ou serviços da FORNECEDORA, bem como uso do site ou infração a direitos de propriedade intelectual e uso de dados, fica eleito o foro da Comarca de Belo Horizonte/MG, em detrimento de qualquer outro por mais privilegiado que seja.
+<br><br>
+Belo Horizonte/MG, 14 de abril de 2025.
+<br><br>
+<b>DIGITAL STAGE LTDA.</b>
+<br>
+<b>CNPJ n. 47.378.381/0001-00</b>
+</p>        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Script JS -->
+  <script data-cfasync="false" src="./JavaScript/email-decode.js"></script><script src="./JavaScript/bootstrap.bundle.min.js"></script>
+  <script src="./JavaScript/live-counter.js"></script>
+  <script src="./JavaScript/progress-bar-animation.js"></script>
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015" integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ==" data-cf-beacon='{"rayId":"9466ed193f7cca7a","serverTiming":{"name":{"cfExtPri":true,"cfEdge":true,"cfOrigin":true,"cfL4":true,"cfSpeedBrain":true,"cfCacheStatus":true}},"version":"2025.4.0-1-g37f21b1","token":"0bc396306ca0478483e4ea268b4eee59"}' crossorigin="anonymous"></script>
+</body>
+
+</html>
